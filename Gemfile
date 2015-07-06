@@ -19,6 +19,5 @@ gem 'rack-livereload'
 gem 'thin'
 
 gem 'pry'
-gem 'pry-debugger'
+gem 'pry-byebug'
 gem 'pry-doc'
-gem 'pry-stack_explorer'
