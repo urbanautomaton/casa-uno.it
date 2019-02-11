@@ -26,8 +26,7 @@ end
 
 desc("Deploy current output directory to GH Pages")
 task(:deploy) do
-  timestamp = Time.now.getutc.strftime("%Y-%m-%d %H:%M:%S UTC")
-  output = `cd output && git add -A . 2>&1 && git commit -m "Site updated at #{timestamp}" 2>&1 && git push 2>&1`
+  output = `s3_website push`
   print output
   raise RuntimeError unless $?.success?
 end
